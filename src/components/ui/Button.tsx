@@ -2,10 +2,12 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import type { MotionProps } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps
+  extends React.PropsWithChildren<Omit<React.ComponentPropsWithoutRef<"button">, keyof MotionProps>> {
   variant?: "primary" | "secondary" | "outline" | "ghost" | "accent";
   size?: "sm" | "md" | "lg";
   icon?: React.ReactNode;
