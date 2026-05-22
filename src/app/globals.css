@@ -1,26 +1,103 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-jp-cream: #F5F1EA;
+  --color-jp-sakura: #D9B2AE;
+  --color-jp-charcoal: #171A1F;
+  --color-jp-indigo: #2F3F55;
+  --color-jp-red: #8F3C45;
+  --color-jp-bamboo: #607664;
+
+  --font-sans: var(--font-noto-sans), sans-serif;
+  --font-display: var(--font-zen-kaku), sans-serif;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
   }
 }
 
+:root {
+  --background: #F5F1EA;
+  --foreground: #171A1F;
+}
+
+/* Custom premium styling */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-noto-sans), sans-serif;
+  background-color: #F5F1EA;
+  color: #171A1F;
+}
+
+/* Glassmorphism details */
+.glass-nav {
+  background: rgba(245, 241, 234, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(23, 26, 31, 0.06);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  box-shadow: 0 10px 30px 0 rgba(23, 26, 31, 0.04);
+}
+
+.glass-card-dark {
+  background: rgba(23, 26, 31, 0.84);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Japanese minimalist decorative patterns */
+.jp-grid-pattern {
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(23, 26, 31, 0.012) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(23, 26, 31, 0.012) 1px, transparent 1px);
+}
+
+/* Traditional red accent line */
+.red-accent-line {
+  position: relative;
+}
+
+.red-accent-line::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #8F3C45;
+}
+
+/* Custom transitions and scroll margins */
+section {
+  scroll-margin-top: 80px;
+}
+
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
 }

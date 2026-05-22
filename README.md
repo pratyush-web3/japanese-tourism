@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 日本極旅 — NIHON TRIP (Premium Japan)
 
-## Getting Started
+日本を深く味わうことを目的としたサンプルサイト／コンテンツ集です。旅先紹介、読み物（ブログ）、旅の体験やおすすめ情報を中心に構成されています。
 
-First, run the development server:
+## Key Info
+
+- **Site name:** 日本極旅 NIHON TRIP
+- **Contact:** concierge@nihontrip.premium
+- **Core pages:** Destinations, Blog, Contact, Privacy, Terms
+
+## Features
+
+- Curated destination pages with long descriptions, highlights, galleries and travel tips
+- Editorial blog posts and category metadata
+- Responsive Next.js app using TypeScript
+- Simple, data-driven content in `src/data` and centralized site config in `src/config/site.ts`
+
+## Tech Stack
+
+- Next.js 16 + React 19
+- TypeScript
+- Tailwind CSS
+- Framer Motion, GSAP for animations
+- lucide-react for icons
+
+## Local development
+
+Install and run locally:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build for production:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Important files
 
-## Learn More
+- Site configuration: [src/config/site.ts](src/config/site.ts#L1-L40)
+- Destination data: [src/data/destinations.ts](src/data/destinations.ts#L1-L200)
+- Blog data and metadata: [src/data/blog.ts](src/data/blog.ts#L1-L40)
+- App entry / homepage: [src/app/page.tsx](src/app/page.tsx#L1-L20)
+- Key components: [src/components/Hero.tsx](src/components/Hero.tsx#L1-L200), [src/components/FeaturedDestinations.tsx](src/components/FeaturedDestinations.tsx#L1-L200)
 
-To learn more about Next.js, take a look at the following resources:
+## Notes for contributors
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Content is largely data-driven; edit or add posts/destinations under `src/data`.
+- Update contact/social links in [src/config/site.ts](src/config/site.ts#L1-L40).
+- Open a PR for design or structure changes; ping maintainers for content updates.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+_Generated/updated to reflect the current site content and structure._
