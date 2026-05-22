@@ -89,11 +89,11 @@ export const Testimonials: React.FC = () => {
             </span>
           </div>
           <h2 className="text-3xl md:text-5xl font-display font-bold tracking-wider text-jp-charcoal leading-tight mb-6">
-            心に響く、感動の記憶
+            心に残る声
           </h2>
           <div className="w-12 h-0.5 bg-jp-red mx-auto mb-6" />
           <p className="text-sm font-sans font-light leading-relaxed text-jp-charcoal/70 tracking-widest">
-            実際に極上の日本を旅した方々から寄せられた、素晴らしい思い出と感動の記録をご紹介します。
+            実際に旅した方たちの、率直な感想を集めました。小さな瞬間が、思い出を作ります。
           </p>
         </div>
 

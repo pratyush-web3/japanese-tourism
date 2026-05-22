@@ -103,7 +103,7 @@ export const FeaturedDestinations: React.FC = () => {
               <div className="h-1.5 w-1.5 rounded-full bg-jp-red" />
 
               <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-jp-indigo md:text-xs">
-                厳選デスティネーション
+                おすすめの行き先
               </p>
             </div>
 
@@ -114,9 +114,8 @@ export const FeaturedDestinations: React.FC = () => {
             </h2>
 
             <p className="mt-6 max-w-xl text-sm leading-8 tracking-wide text-jp-charcoal/70 md:text-base">
-              単なる旅行ではなく、
-              日本文化の奥深さを体験する特別な旅。
-              静寂、自然、伝統、そして洗練された美意識を巡ります。
+              ただの観光ではなく、暮らしや時間の流れに触れる旅をご提案します。
+              静けさや自然、職人の技、季節の色合いを五感で感じてください。
             </p>
           </div>
 

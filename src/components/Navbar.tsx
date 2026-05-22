@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Compass, Globe } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/Button";
 import { SITE_CONFIG } from "@/config/site";
@@ -14,9 +14,9 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   { label: "ホーム", href: "/" },
-  { label: "厳選地", href: "/#destinations" },
-  { label: "特別な体験", href: "/#experiences" },
-  { label: "旅人の声", href: "/#testimonials" },
+  { label: "おすすめの場所", href: "/#destinations" },
+  { label: "体験を探す", href: "/#experiences" },
+  { label: "旅の声", href: "/#testimonials" },
   { label: "旅ブログ", href: SITE_CONFIG.links.blog },
 ];
 
@@ -61,7 +61,7 @@ export const Navbar: React.FC = () => {
                 日本極旅
               </span>
               <span className="text-[9px] font-medium tracking-[0.25em] text-jp-indigo uppercase">
-                Premium Japan
+                Curated journeys across Japan
               </span>
             </div>
           </Link>
@@ -77,33 +77,21 @@ export const Navbar: React.FC = () => {
                   >
                     {link.label}
                     {/* Hover Red Line */}
-                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-jp-red group-hover:w-1/2 transition-all duration-300 ease-out" />
+                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-jp-red group-hover:w-1/2 transition-all duration-300 ease-out" />
                   </Link>
                 </li>
               ))}
               <li>
                 <Link
                   href={SITE_CONFIG.links.contact}
-                  className="relative text-xs font-display tracking-widest text-jp-charcoal/80 hover:text-jp-charcoal py-2 group block transition-colors duration-300 font-bold text-jp-indigo"
+                  className="relative text-xs font-display tracking-widest text-jp-charcoal/80 hover:text-jp-charcoal py-2 group block transition-colors duration-300 font-bold"
                 >
                   お問い合わせ
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-jp-red group-hover:w-1/2 transition-all duration-300 ease-out" />
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-jp-red group-hover:w-1/2 transition-all duration-300 ease-out" />
                 </Link>
               </li>
             </ul>
-
-            {/* Language Toggle (Visual) */}
-            <div className="flex items-center gap-1.5 border-l border-jp-charcoal/10 pl-6 text-[11px] font-display text-jp-indigo/70 font-semibold tracking-wider">
-              <Globe className="w-3.5 h-3.5" />
-              <span className="text-jp-red font-bold">JA</span>
-              <span className="opacity-40">|</span>
-              <span className="hover:text-jp-charcoal cursor-pointer transition-colors">EN</span>
-            </div>
-
-            {/* CTA Button */}
-            <Button variant="primary" size="sm" href={SITE_CONFIG.links.contact} icon={<Compass className="w-3.5 h-3.5" />}>
-              旅を始める
-            </Button>
+            
           </div>
 
           {/* Mobile Menu Icon */}
@@ -156,7 +144,7 @@ export const Navbar: React.FC = () => {
                     <Link
                       href={link.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="font-display text-2xl font-semibold tracking-wider text-jp-charcoal hover:text-jp-red transition-colors block"
+                      className="font-display text-2xl font-bold tracking-wider text-jp-charcoal hover:text-jp-red transition-colors block"
                     >
                       {link.label}
                     </Link>
@@ -170,7 +158,7 @@ export const Navbar: React.FC = () => {
                   <Link
                     href={SITE_CONFIG.links.contact}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="font-display text-2xl font-semibold tracking-wider text-jp-indigo hover:text-jp-red transition-colors block font-bold"
+                    className="font-display text-2xl font-bold tracking-wider text-jp-indigo hover:text-jp-red transition-colors block"
                   >
                     お問い合わせ
                   </Link>
@@ -181,12 +169,12 @@ export const Navbar: React.FC = () => {
             <div className="flex flex-col gap-6">
               <div className="flex items-center gap-2 text-xs font-display font-semibold text-jp-indigo">
                 <Globe className="w-4 h-4" />
-                <span className="text-jp-red">日本語 (JA)</span>
+                <span className="text-jp-red">日本語</span>
                 <span className="opacity-30">|</span>
-                <span className="hover:text-jp-charcoal cursor-pointer">English (EN)</span>
+                <span className="hover:text-jp-charcoal cursor-pointer">English</span>
               </div>
               <div className="text-[10px] font-sans text-jp-charcoal/40 tracking-wider">
-                © {new Date().getFullYear()} 日本極旅 NIHON TRIP. All rights reserved.
+                © {new Date().getFullYear()} 日本極旅 — Discover authentic Japan.
               </div>
             </div>
           </motion.div>

@@ -44,9 +44,9 @@ export const Hero: React.FC = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/45" />
 
-      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/80" />
+      <div className="absolute inset-0 bg-linear-to-b from-black/30 via-black/20 to-black/80" />
 
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/20 to-transparent" />
 
       {/* Content */}
       <div className="relative z-20 flex h-full items-center">
@@ -91,10 +91,9 @@ export const Hero: React.FC = () => {
               }}
               className="mt-8 max-w-2xl text-base leading-8 text-white/75 md:text-lg"
             >
-              京都の古き街並み、静寂な寺院、
-              四季折々の風景。
-              日本ならではの美しい時間を
-              体験してください。
+              京都の石畳を歩き、静かな寺院で風を感じる。
+              春の桜、秋の紅葉、冬の雪景色──四季が織りなす表情を
+              ゆっくり味わいながら、あなたの時間を見つけてください。
             </motion.p>
 
             {/* Buttons */}
@@ -112,32 +111,14 @@ export const Hero: React.FC = () => {
               </button>
 
               <button className="rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur-md transition-all duration-500 hover:bg-white/10">
-                特別な体験を見る
+                体験を探す
               </button>
             </motion.div>
           </div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-10 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-2"
-        animate={{
-          y: [0, 10, 0],
-        }}
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-        }}
-      >
-        <span className="text-[10px] tracking-[0.3em] text-white/50">
-          SCROLL
-        </span>
 
-        <div className="rounded-full border border-white/20 bg-white/5 p-2 backdrop-blur-sm">
-          <ArrowDown className="h-4 w-4 text-white/70" />
-        </div>
-      </motion.div>
     </section>
   );
 };

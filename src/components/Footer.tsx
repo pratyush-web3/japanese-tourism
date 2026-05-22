@@ -39,7 +39,8 @@ export const Footer: React.FC = () => {
             </Link>
             
             <p className="text-sm font-sans font-light leading-relaxed text-jp-cream/60 tracking-widest max-w-sm mb-6">
-              日本の真髄に触れる、完全オーダーメイドの極上プライベートツアー。歴史ある伝統、静寂なる大自然、そして本物のおもてなしでお客様をお迎えします。
+              日本の本質に触れる、完全オーダーメイドのプライベートツアーです。
+              歴史ある文化、静かな自然、心のこもったおもてなしで、あなただけの時間を作ります。
             </p>
 
             {/* Social Icons */}
@@ -81,7 +82,8 @@ export const Footer: React.FC = () => {
               特別な旅の便りを受け取る
             </h3>
             <p className="text-xs font-sans font-light text-jp-cream/60 tracking-widest mb-6">
-              日本の隠れた名所、特別な文化体験、そして季節の移ろいを巡るプレミアムな旅行プラン情報を、定期的にお届けします。
+              隠れた名所や季節の見どころ、限定の体験プランなどを定期的にお届けします。
+              知っていると旅がもっと面白くなる、ちょっと特別な情報です。
             </p>
             
             <form onSubmit={(e) => e.preventDefault()} className="flex flex-col sm:flex-row gap-3 w-full max-w-lg">
@@ -161,13 +163,13 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-jp-cream/10 mt-4 text-[10px] font-sans text-jp-cream/40 tracking-wider">
           <div className="flex items-center gap-2 mb-4 md:mb-0">
             <Globe className="w-3.5 h-3.5" />
-            <span className="text-jp-red">日本語 (JA)</span>
+            <span className="text-jp-red">日本語</span>
             <span>|</span>
-            <span className="hover:text-jp-cream cursor-pointer">English (EN)</span>
+            <span className="hover:text-jp-cream cursor-pointer">English</span>
           </div>
           
           <div className="text-center md:text-right">
-            <span>© {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved. </span>
+            <span>© {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.</span>
             <span className="mx-2">|</span>
             <Link href={SITE_CONFIG.links.privacy} className="hover:text-jp-cream transition-colors">プライバシーポリシー</Link>
             <span className="mx-2">|</span>

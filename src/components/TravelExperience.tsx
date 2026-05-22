@@ -90,15 +90,16 @@ export const TravelExperience: React.FC = () => {
           <div className="inline-flex items-center gap-2 mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-jp-red" />
             <span className="text-[10px] md:text-xs font-display tracking-[0.3em] font-semibold text-jp-indigo uppercase">
-              極上の日本文化体験
+              日本でしかできない体験
             </span>
           </div>
           <h2 className="text-3xl md:text-5xl font-display font-bold tracking-wider text-jp-charcoal leading-tight mb-6">
-            心に刻まれる、特別な体験
+            心に残る、特別なひととき
           </h2>
           <div className="w-12 h-0.5 bg-jp-red mx-auto mb-6" />
           <p className="text-sm font-sans font-light leading-relaxed text-jp-charcoal/70 tracking-widest">
-            一般的な観光ルートでは辿り着けない、日本の美の深奥へ。伝統の継承者たちと紡ぐ、あなただけの特別なストーリーをご用意しております。
+            よく知られた観光地とは一味違う、職人や寺社、自然と直接つながる体験を集めました。
+            大切なのは、あなたがその場で何を感じるかです。
           </p>
         </div>
 

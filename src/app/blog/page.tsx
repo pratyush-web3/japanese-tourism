@@ -66,7 +66,7 @@ export default function BlogPage() {
               <div className="absolute inset-0 flex items-end p-8 md:p-10">
                 <div className="max-w-2xl">
                   <p className="text-[10px] uppercase tracking-[0.35em] text-jp-sakura/80">
-                    Featured Story
+                    注目記事
                   </p>
                   <h2 className="mt-4 font-display text-3xl font-bold leading-tight md:text-5xl">
                     {featuredPost.title}
@@ -189,7 +189,7 @@ export default function BlogPage() {
                       href={`/blog/${post.slug}`}
                       className="text-xs font-semibold tracking-[0.25em] text-jp-red transition hover:text-jp-charcoal"
                     >
-                      READ MORE
+                      続きを読む
                     </Link>
                   </div>
                 </div>

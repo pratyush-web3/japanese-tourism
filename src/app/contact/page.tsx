@@ -57,7 +57,7 @@ export default function ContactPage() {
             </h1>
             <div className="w-12 h-0.5 bg-jp-red mx-auto mb-6" />
             <p className="text-sm font-sans font-light leading-relaxed text-jp-charcoal/70 tracking-widest">
-              日本の真髄に触れる、あなただけの特別な旅路の始まり。専属コンシェルジュが、ご要望を丁寧に反映したオーダーメイドプランをご提案いたします。
+              あなたの理想の旅を、具体的に聞かせてください。専属コンシェルジュが希望を伺い、最適なオーダーメイドプランを提案します。
             </p>
           </div>
 
@@ -304,10 +304,10 @@ export default function ContactPage() {
                       
                       <div className="space-y-3">
                         <h3 className="text-2xl font-display font-bold text-jp-charcoal tracking-wide">
-                          ご相談を承りました
+                          お問い合わせを受け付けました
                         </h3>
                         <p className="text-xs md:text-sm font-sans font-light leading-relaxed text-jp-charcoal/70 tracking-widest max-w-md mx-auto">
-                          お問い合わせいただき誠にありがとうございます。24時間以内に専属の旅コンシェルジュより、ご入力いただいたメールアドレス（{formData.email}）宛てにご連絡いたします。
+                          ありがとうございます。24時間以内に専属コンシェルジュより、ご登録のメール（{formData.email}）へご連絡します。
                         </p>
                       </div>
 
